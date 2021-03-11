@@ -20,14 +20,14 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://postgresql-postgresql-ha-postgresql.default.svc.cluster.local:5432/eshop_db"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: eshop_user
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: password             
             # - name: SPRING_PROFILES_ACTIVE
             #   value: "chaos-monkey"
             - name: GOOGLE_CLOUD_PROJECT
               value: architect-certification-289902
-            - name: SPRING_DATASOURCE_USERNAME
-              value: "eshop_user"
-            - name: SPRING_DATASOURCE_PASSWORD
-              value: "password" 
 ---
 apiVersion: v1
 kind: Service
